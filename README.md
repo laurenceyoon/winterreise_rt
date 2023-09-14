@@ -1,4 +1,4 @@
-# winterreise_rt: A subset of Schubert Winterreise Dataset(SWD) for real-time lyrics alignment
+# *winterreise_rt*: a subset of Schubert Winterreise Dataset(SWD) for real-time lyrics alignment
 
 ## About
 *winterreise_rt* is a subset of the [Schubert Winterreise Dataset (SWD)](https://zenodo.org/record/4122060) [1] for the purpose of real-time lyrics alignment.
@@ -7,6 +7,7 @@ It includes symbolic scores, lyrics, midi, and nine audio recordings, two of whi
 While the SWD dataset is structured for evaluating tasks such as automated music transcription or musicological structure analysis, it also provides excellent data for evaluating real-time music alignment tasks.
 The dataset provides different performance versions of the same song by different singers along with annotations.
 We cast the Schubert Winterreise Dataset(SWD) into *winterreise_rt*, a subset that enables the benchmark evaluation of real-time lyrics alignment models.
+While the original dataset used the singer's name as the identifier for each performance version, we used *ref* (as a reference audio) and *target* (as a target audio) as identifiers.
 
 ## Dataset
 
@@ -26,6 +27,38 @@ Based on our proposed system of real-time lyrics alignment, we also provide the 
 
 - *score* audio: MIDI-synthesized audio from the musicxml score.
 - *score* annotation: Voice note-level annotation of the *score* audio.
+
+These data are optional for evaluating real-time lyrics alignment models in general but may play a supporting role depending on the implementation and application. 
+In particular, they may be helpful if the real-time lyrics alignment model borrows from a method from real-time audio-to-score alignment, or *score following*.
+
+---
+
+## Environment Setting
+
+Tested on Python 3.10 & Mamaforge
+
+```bash
+# if you have mamba installed
+$ mamba env create -f environment.yml
+
+# if you have conda installed
+$ conda env create -f environment.yml
+
+# activate the environment
+$ mamba activate wrt  # or conda activate wrt
+```
+
+## Usage
+
+```bash
+# download the winterreise dataset
+$ wget "https://zenodo.org/record/5139893/files/Schubert_Winterreise_Dataset_v2-0.zip?download=1" -O winterreise.zip
+$ unzip winterreise -d winterreise
+$ rm -r winterreise.zip
+
+# reconstruct the winterreise_rt dataset
+$ python preprocess.py --src ./winterreise --dest ./winterreise_rt
+```
 
 ## References
 

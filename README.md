@@ -51,13 +51,13 @@ $ mamba activate wrt  # or conda activate wrt
 ## Usage
 
 ```bash
-# download the winterreise dataset
+# download the winterreise dataset (v2.0)
 $ wget "https://zenodo.org/record/5139893/files/Schubert_Winterreise_Dataset_v2-0.zip?download=1" -O winterreise.zip
 $ unzip winterreise -d winterreise
 $ rm -r winterreise.zip
 
 # reconstruct the winterreise_rt dataset
-$ python preprocess.py --src ./winterreise --dest ./winterreise_rt
+$ python reconstruct.py --src ./winterreise --dest ./winterreise_rt
 ```
 
 ## References

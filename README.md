@@ -21,7 +21,7 @@ The main adjustments are the following:
 
 Data including the musicxml, midi, and lyrics are still included in the *winterreise_rt* dataset, although they may not directly used for the evaluating the real-time lyrics alignment model.
 
-## Additional Data
+## Additional Data [(Download Link)](https://github.com/laurenceyoon/winterreise_rt/releases/tag/0.0.1)
 
 Based on our proposed system of real-time lyrics alignment, we also provide the following additional data:
 

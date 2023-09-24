@@ -1,4 +1,4 @@
-# *winterreise_rt*: a subset of Schubert Winterreise Dataset(SWD) for real-time lyrics alignment
+## *winterreise_rt*: a subset of Schubert Winterreise Dataset(SWD) for real-time lyrics alignment
 
 ## About
 *winterreise_rt* is a subset of the [Schubert Winterreise Dataset (SWD)](https://zenodo.org/record/4122060) [1] for the purpose of real-time lyrics alignment.
@@ -6,7 +6,7 @@ The Schubert Winterreise Dataset(SWD) dataset is a collection of resources of Sc
 It includes symbolic scores, lyrics, midi, and nine audio recordings, two of which are publicly accessible. 
 While the SWD dataset is structured for evaluating tasks such as automated music transcription or musicological structure analysis, it also provides excellent data for evaluating real-time music alignment tasks.
 The dataset provides different performance versions of the same song by different singers along with annotations.
-We cast the Schubert Winterreise Dataset(SWD) into *winterreise_rt*, a subset that enables the benchmark evaluation of real-time lyrics alignment models.
+We recast the Schubert Winterreise Dataset(SWD) into *winterreise_rt*, a subset that enables the benchmark evaluation of real-time lyrics alignment models.
 While the original dataset used the singer's name as the identifier for each performance version, we used *ref* (as a reference audio) and *target* (as a target audio) as identifiers.
 
 ## Dataset
@@ -21,9 +21,9 @@ The main adjustments are the following:
 
 Data including the musicxml, midi, and lyrics are still included in the *winterreise_rt* dataset, although they may not directly used for the evaluating the real-time lyrics alignment model.
 
-## Additional Data [(Download Link)](https://github.com/laurenceyoon/winterreise_rt/releases/tag/0.0.1)
+## Additional Data
 
-Based on our proposed system of real-time lyrics alignment, we also provide the following additional data:
+Based on our proposed system of real-time lyrics alignment, we also provide the following additional data which you can download from [here](https://github.com/laurenceyoon/winterreise_rt/releases/tag/0.0.1):
 
 - *score* audio: MIDI-synthesized audio from the musicxml score.
 - *score* annotation: Voice note-level annotation of the *score* audio.
